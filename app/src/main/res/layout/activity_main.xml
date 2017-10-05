@@ -29,6 +29,12 @@
             android:gravity="center"
             android:hint="@string/votre_nom_ici"/>
 
+        <Button
+            android:id="@+id/add_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tacos"/>
+
     </LinearLayout>
 
 
