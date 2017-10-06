@@ -1,5 +1,6 @@
 package com.example.apprenti.rajiotaiso;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,13 +18,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        add_user = (Button) findViewById(R.id.add_user);
         username_input = (EditText) findViewById(R.id.username_input);
-
+        add_user = (Button) findViewById(R.id.add_user);
         add_user.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,(username_input.getText().toString()),Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(MainActivity.this, UserActivity.class);
+                startActivity(intent);
+
+                Toast.makeText(MainActivity.this,(username_input.getText().toString()),
+                        Toast.LENGTH_LONG).show();
+
+
             }
         });
     }
