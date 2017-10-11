@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -16,6 +18,7 @@ public class UserActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +27,10 @@ public class UserActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        String username_input = getIntent().getStringExtra("editText");
+        TextView textView  = (TextView) findViewById(R.id.result_username);
+        textView.setText(username_input);
     }
 
 }

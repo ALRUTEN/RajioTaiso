@@ -20,19 +20,26 @@ public class MainActivity extends AppCompatActivity {
 
         username_input = (EditText) findViewById(R.id.username_input);
         add_user = (Button) findViewById(R.id.add_user);
+
         add_user.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, UserActivity.class);
-                startActivity(intent);
 
-                Toast.makeText(MainActivity.this,(username_input.getText().toString()),
+                Toast.makeText(MainActivity.this, (username_input.getText().toString()),
                         Toast.LENGTH_LONG).show();
 
-
+                intent.putExtra("editText", username_input.getText().toString());
+                startActivity(intent);
             }
+
         });
+
     }
+
 }
+
+
+
