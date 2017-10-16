@@ -5,4 +5,8 @@
     <string name="tacos">MaxiTacos</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="NomDuParticipant">Nom du participant</string>
+    <string name="NomDecole">Nom de école</string>
+    <string name="NomDecole2">Votre école ici</string>
+    <string name="NomLanguage">Votre Langage</string>
+    <string name="NomLanguage2">Votre Langage ici</string>
 </resources>

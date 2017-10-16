@@ -20,8 +20,8 @@ public class UserActivity extends AppCompatActivity {
 
 
 
-        String username = getIntent().getExtras().getParcelable("username");
-        TextView textView  = (TextView) findViewById(R.id.username_input);
+        String username = getIntent().getStringExtra("usermodel");
+        TextView textView  = (TextView) findViewById(R.id.result_username);
         textView.setText(username);
     }
 

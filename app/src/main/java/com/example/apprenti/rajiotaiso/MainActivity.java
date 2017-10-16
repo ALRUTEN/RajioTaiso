@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button add_user;
     EditText username_input;
+    EditText scool_edit;
+    EditText language_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         username_input = (EditText) findViewById(R.id.username_input);
         add_user = (Button) findViewById(R.id.add_user);
+        scool_edit = (EditText) findViewById(R.id.scool_edit);
+        language_edit = (EditText) findViewById(R.id.language_edit);
 
         add_user.setOnClickListener(new View.OnClickListener() {
 
@@ -33,9 +37,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, (username_input.getText().toString()),
                         Toast.LENGTH_LONG).show();
 
+                Toast.makeText(MainActivity.this, (scool_edit.getText().toString()),
+                        Toast.LENGTH_LONG).show();
+
+                Toast.makeText(MainActivity.this, (language_edit.getText().toString()),
+                        Toast.LENGTH_LONG).show();
+
                 UserModel userModel = new UserModel(username_input.getText().toString());
 
-                intent.putExtra("usermodel", userModel);
+                intent.putExtra("usermodel", userModel.getUserName());
 
                 startActivity(intent);
             }
