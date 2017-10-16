@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
                 UserModel userModel = new UserModel(username_input.getText().toString());
 
-                intent.putExtra("editText", username_input.getText().toString());
+                intent.putExtra("usermodel", userModel);
 
                 startActivity(intent);
             }

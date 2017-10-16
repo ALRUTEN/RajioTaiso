@@ -19,18 +19,10 @@ public class UserActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
-        String username_input = getIntent().getStringExtra("editText");
-        TextView textView  = (TextView) findViewById(R.id.result_username);
-        textView.setText(username_input);
+        String username = getIntent().getExtras().getParcelable("username");
+        TextView textView  = (TextView) findViewById(R.id.username_input);
+        textView.setText(username);
     }
 
 }
