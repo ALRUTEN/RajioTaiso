@@ -1,4 +1,4 @@
-package com.example.apprenti.rajiotaiso.UserModel;
+package com.example.apprenti.rajiotaiso;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,14 +10,40 @@ import android.os.Parcelable;
 public class UserModel implements Parcelable {
 
     private String userName;
+    private String scool;
+    private String language;
 
 
-    public UserModel(String userName) {
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    protected UserModel(Parcel in) {
-        userName = in.readString();
+    public String getScool() {
+        return scool;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+
+    public UserModel(String userName, String scool, String language) {
+        this.userName = userName;
+        this.scool = scool;
+        this.language = language;
+
+    }
+
+    public UserModel(Parcel in) {
+        this.userName = in.readString();
+        this.scool = in.readString();
+        this.language = in.readString();
+
+
     }
 
     public static final Creator<UserModel> CREATOR = new Creator<UserModel>() {
@@ -32,9 +58,6 @@ public class UserModel implements Parcelable {
         }
     };
 
-    public String getUserName() {
-        return userName;
-    }
 
     @Override
     public int describeContents() {
@@ -44,6 +67,9 @@ public class UserModel implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(userName);
+        parcel.writeString(scool);
+        parcel.writeString(language);
+
     }
 
 

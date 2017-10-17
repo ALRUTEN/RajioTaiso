@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.apprenti.rajiotaiso.UserModel.UserModel;
-
 public class MainActivity extends AppCompatActivity {
 
     Button add_user;
@@ -43,9 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, (language_edit.getText().toString()),
                         Toast.LENGTH_LONG).show();
 
-                UserModel userModel = new UserModel(username_input.getText().toString());
+                String username = username_input.getText().toString();
+                String scool = scool_edit.getText().toString();
+                String language = language_edit.getText().toString();
 
-                intent.putExtra("usermodel", userModel.getUserName());
+                UserModel userModel = new UserModel(username,scool,language);
+
+                intent.putExtra("usermodel", userModel);
 
                 startActivity(intent);
             }

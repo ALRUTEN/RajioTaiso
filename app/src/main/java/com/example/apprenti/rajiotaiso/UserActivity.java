@@ -15,13 +15,12 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-
-
-        String username = getIntent().getStringExtra("usermodel");
         TextView textView  = (TextView) findViewById(R.id.result_username);
+
+        UserModel userModel = getIntent().getExtras().getParcelable("usermodel");
+        String username = userModel.getUserName();
+
         textView.setText(username);
     }
 
