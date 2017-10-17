@@ -17,11 +17,17 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.user_activity);
 
         TextView textView  = (TextView) findViewById(R.id.result_username);
+        TextView textView2 = (TextView) findViewById(R.id.result_school);
+        TextView textView3 = (TextView) findViewById(R.id.result_language);
 
         UserModel userModel = getIntent().getExtras().getParcelable("usermodel");
         String username = userModel.getUserName();
+        String school = userModel.getSchool();
+        String language = userModel.getLanguage();
 
         textView.setText(username);
+        textView2.setText(school);
+        textView3.setText(language);
     }
 
 }

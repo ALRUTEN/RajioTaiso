@@ -9,4 +9,6 @@
     <string name="NomDecole2">Votre école ici</string>
     <string name="NomLanguage">Votre Langage</string>
     <string name="NomLanguage2">Votre Langage ici</string>
+    <string name="NomDelecole">Nom de l\'école</string>
+    <string name="NomDuLanguage">Nom du langage</string>
 </resources>

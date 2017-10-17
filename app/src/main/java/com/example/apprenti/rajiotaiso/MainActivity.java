@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
 
                 String username = username_input.getText().toString();
-                String scool = scool_edit.getText().toString();
+                String school = scool_edit.getText().toString();
                 String language = language_edit.getText().toString();
 
-                UserModel userModel = new UserModel(username,scool,language);
+                UserModel userModel = new UserModel(username,school,language);
 
                 intent.putExtra("usermodel", userModel);
 

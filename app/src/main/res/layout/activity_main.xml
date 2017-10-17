@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tacos"
     tools:context="com.example.apprenti.rajiotaiso.MainActivity">
 
     <LinearLayout
@@ -14,6 +15,7 @@
         tools:layout_editor_absoluteX="8dp">
 
         <TextView
+            style="@style/Text"
             android:id="@+id/username_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,6 +34,7 @@
             android:hint="@string/votre_nom_ici"/>
 
         <TextView
+            style="@style/Text"
             android:id="@+id/scool_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +53,7 @@
             android:hint="@string/NomDecole2"/>
 
         <TextView
+            style="@style/Text"
             android:id="@+id/language_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
